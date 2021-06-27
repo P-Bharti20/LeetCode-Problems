@@ -2,13 +2,12 @@
 #Write a function that takes in an integer n and returns the nth Fibonacci number
 
 def getNthFib(n):
-    F=[0,1]
-    for i in range(2,n+1):
-        F.append(F[i-1]+F[i-2])
-    return F
+    if n <= 2:
+        return n-1
+    return getNthFib(n-1)+getNthFib(n-2)
 
 #input an integer n
 n=int(input())
 
 #print nth fibonacci number
-[ print(i, end=" ") for i in getNthFib(n)]
+print(n,"th fibonacci number: ",getNthFib(n), sep="")
