@@ -1,3 +1,5 @@
+#https://www.geeksforgeeks.org/count-pairs-with-given-sum/
+
 #naive approach
 #O(n^2) Time / O(1) Space
 def twoNumberSum(arr,targetSum):
