@@ -3,7 +3,7 @@
 def isMonotonicArray(arr):
   if len(arr)<=2:
     return True
-  
+    
   direction=arr[1]-arr[0]
   for i in range(2,len(arr)):
     if direction==0:
@@ -15,7 +15,7 @@ def isMonotonicArray(arr):
   return True
 
 def breakDirection(direction,prevNum, currNum):
-  diff=prevNum-currNum
+  diff=currNum-prevNum
   if direction>0:
     return diff<0
   return diff>0
