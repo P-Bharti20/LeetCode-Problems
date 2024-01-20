@@ -1,3 +1,7 @@
+#include<list>
+#include<unordered_map>
+using namespace std;
+
 class LRUCache {
     list<int> lst;
     unordered_map<int,pair<int,list<int>::iterator>> mp;
