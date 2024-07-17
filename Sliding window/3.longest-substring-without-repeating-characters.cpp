@@ -8,25 +8,24 @@
 using namespace std;
 class Solution {
 public:
-    int len=0;
-    unordered_map<char,int> mp;
     int lengthOfLongestSubstring(string s) {
+        int len=0;
+        /*int mp[256];
+        for(int i=0;i<256;i++) mp[i]=-1;*/
+        unordered_map<char,int> mp;
         int l=0,r=0;
-        while(l<r&&r<s.length()){
-            
-            if(mp.find(s[r])!=mp.end()){
-                while(l<=r){
-                    mp.erase(s[l]);
-                    l++;
-                }
+        while(r<s.length()){
+            if(mp.find(s[r])!=mp.end() && mp[s[r]]>=l){
+                l=mp[s[r]]+1;
             }
             mp[s[r]]=r;
             len=max(len,r-l+1);
             r++;
         }
-        len=max(len,r-l+1);
         return len;
     }
 };
-// @lc code=end
+
+//TC: O(N)
+//SC: O(N)
 
