@@ -27,3 +27,40 @@ public:
 
 //TC: O(N)
 //SC: O(1)
+
+/* More Optimization
+class Solution {
+public:
+    int totalFruit(vector<int>& fruits) {
+        int maxi=0;
+        pair<int,int> p[]={{-1,0},{-1,0}};
+        int val1=-1,val2=-1;
+        int r=0;
+        while(r<fruits.size()){ 
+            if(p[0].first==-1 || p[0].first==fruits[r]){
+                p[0].first=fruits[r];
+                p[0].second++;
+            }
+            else if(p[1].first==-1 || p[1].first==fruits[r]){
+                p[1].first=fruits[r]; 
+                p[1].second++;
+                swap(p[0],p[1]);
+            }  
+            else{
+                int idx=r-1, cnt=0;
+                while(idx>=0 && p[0].first==fruits[idx]){
+                    idx--;
+                    cnt++;
+                }
+                p[0].second=cnt;
+                p[1].first=fruits[r];
+                p[1].second=1;
+                swap(p[0],p[1]);
+            }
+            maxi=max(maxi,p[0].second+p[1].second);
+            r++;
+        }
+        return maxi;
+    }
+};
+*/
