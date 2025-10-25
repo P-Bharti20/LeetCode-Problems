@@ -25,3 +25,4 @@ Topic-wise data structure and algorithm questions and their solution
 * [Coding Interview patterns](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
 * [List of Questions](https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns)
 
+# [Leetcode Blind 75 problems](https://leetcode.com/discuss/post/460599/blind-75-leetcode-questions-by-krishnade-9xev/)
